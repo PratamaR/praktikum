@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BiodataController;
+
+use function Ramsey\Uuid\v1;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,5 +25,13 @@ Route::get('/list_siswa', function () {
     return view('list_siswa');
 });
 
-Route::get('/home', [HomeController::class, 'home']);
-Route::get('/list_siswa', [BiodataController::class, 'index']);
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/list_siswa', [BiodataController::class, 'index'])->name('list_siswa');
+Route::get('/form_tambah_siswa', [BiodataController::class, 'create'])->name('add_siswa');
+Route::post('/store_siswa', [BiodataController::class, 'store']);
+Route::get('/edit/{id}', [BiodataController::class, 'edit'])->name('edit-siswa');
+Route::put('/update/{id}', [BiodataController::class, 'update'])->name('update-siswa');
+Route::delete('/delete/{id}', [BiodataController::class, 'destroy'])->name('destroy-siswa');
+Route::get('/bio/{id}', [BiodataController::class, 'show'])->name('show-bio');
+
+Route::get('/post', [PostController::class, 'index']);

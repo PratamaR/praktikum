@@ -13,7 +13,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">iBio</a>
+          <a class="navbar-brand" href="#">BIO</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -49,7 +49,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-2">
-            <img src="{{ $photo }}" class="rounded-circle" width="80%" height= "60%",>
+            <img src="" class="rounded-circle" width="80%">
           </div>
           <div class="col-md-6">
             Informasi Pribadi
@@ -60,35 +60,35 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-md-6">Nama Lengkap</div>
-                    <div class="col-md-6">: {{ $nama }}</div>
+                    <div class="col-md-6">: {{ $bio->nama }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Tempat, Tanggal Lahir</div>
-                    <div class="col-md-6">: {{ $lahir }}</div>
+                    <div class="col-md-6">: {{ $bio->lahir }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Hobby</div>
-                    <div class="col-md-6">: {{ $hobi }}</div>
+                    <div class="col-md-6">: {{ $bio->hobi }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Jenis Kelamin</div>
-                    <div class="col-md-6">: {{ $jk }}</div>
+                    <div class="col-md-6">: {{ $bio->jk }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Agama</div>
-                    <div class="col-md-6">: {{ $agama }}</div>
+                    <div class="col-md-6">: {{ $bio->agama }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Alamat</div>
-                    <div class="col-md-6">: {{ $alamat }}</div>
+                    <div class="col-md-6">: {{ $bio->alamat }}</div>
                  </div>
                   <div class="row">
                      <div class="col-md-6">Telp</div>
-                     <div class="col-md-6">: {{ $telp }}</div>
+                     <div class="col-md-6">: {{ $bio->telp }}</div>
                   </div>
                   <div class="row">
                     <div class="col-md-6">Email</div>
-                    <div class="col-md-6">: {{ $email }}</div>
+                    <div class="col-md-6">: {{ $bio->email }}</div>
                  </div>
                 </div>
               </div>
@@ -99,16 +99,16 @@
                 <div class="list-group-item list-group-item-action">
                   <h5 class="mb-1">Universitas Komputer Indonesia</h5>
                   <p class="mb-1">Sistem Informasi</p>
-                  <small>2022 - 2005</small>
+                  <small>2021 - 2005</small>
                 </div>
                 <div class="list-group-item list-group-item-action">
-                  <h5 class="mb-1">SMK BAKTI NUSANTARA 666</h5>
-                  <p class="mb-1">Rekayasa Perangkat Lunak</p>
-                  <small>2019 - 2022</small>
+                  <h5 class="mb-1">SMA Negeri 2 Cimahi</h5>
+                  <p class="mb-1">Ilmu Pengetahuan Sosial</p>
+                  <small>1998 - 2021</small>
                 </div>
                 <div class="list-group-item list-group-item-action">
-                  <h5 class="mb-1">SMP Pasundan Rancaekek</h5>
-                  <small>2016 - 2019</small>
+                  <h5 class="mb-1">SMP Negeri 3 Cimahi</h5>
+                  <small>1995 - 1998</small>
                 </div>
           </div>
         </div>

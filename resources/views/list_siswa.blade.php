@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>List Data Siswa</title>
   </head>
   <body>
@@ -22,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="home">Home</a>
+                <a class="nav-link" aria-current="page" href="{{ route('home')}}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="blog">Blog</a>
@@ -32,8 +31,8 @@
                   Siswa
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="list_siswa">Lihat Data</a></li>
-                  <li><a class="dropdown-item" href="#">Tambah Siswa</a></li>
+                  <li><a class="dropdown-item" href="{{ route('list_siswa')}}">Lihat Data</a></li>
+                  <li><a class="dropdown-item" href="{{ route('add_siswa')}}">Tambah Siswa</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
@@ -48,7 +47,7 @@
             <h1 class="display-4">List Data Siswa</h1>
             <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
 
-        <table class="table">
+        <table class="table" id="tabel_siswa">
             <thead>
               <tr>
                 <th scope="col">No</th>
@@ -77,14 +76,21 @@
                 <td> {{ $bio->alamat }} </td>
                 <td> {{ $bio->telp }} </td>
                 <td> {{ $bio->email }} </td>
-                <td>
-                    <button type="button" class="btn btn-warning">Edit</button>
-                    <button type="button" class="btn btn-danger">Hapus</button>
-                    <button type="button" class="btn btn-primary">Lihat</button>
+                <td><form method="POST" action="{{ route('destroy-siswa',$bio->id) }}">
+                    <a button type="button" class="btn btn-warning" href="{{ route('edit-siswa',$bio->id) }}">Edit</button></a>
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                        <a button type="button" class="btn btn-primary" href="{{ route('show-bio',$bio->id) }}">Lihat</button></a>
+                    </form>
+                </td>
               </tr>
               @endforeach
             </tbody>
           </table>
+          <a href="{{route('add_siswa')}}">
+            <button type="button" class="btn btn-primary">Tambah Siswa</button>
+        </a>
         </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
