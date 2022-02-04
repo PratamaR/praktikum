@@ -18,14 +18,14 @@ use function Ramsey\Uuid\v1;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/list_siswa', function () {
     return view('list_siswa');
 });
 
-Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/home2', [HomeController::class, 'home'])->name('home');
 Route::get('/list_siswa', [BiodataController::class, 'index'])->name('list_siswa');
 Route::get('/form_tambah_siswa', [BiodataController::class, 'create'])->name('add_siswa');
 Route::post('/store_siswa', [BiodataController::class, 'store']);
@@ -35,3 +35,7 @@ Route::delete('/delete/{id}', [BiodataController::class, 'destroy'])->name('dest
 Route::get('/bio/{id}', [BiodataController::class, 'show'])->name('show-bio');
 
 Route::get('/post', [PostController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
