@@ -25,6 +25,10 @@ Route::get('/list_siswa', function () {
     return view('list_siswa');
 });
 
+Route::get('/blog', function () {
+    return view('blog');
+});
+
 Route::get('/home2', [HomeController::class, 'home'])->name('home');
 Route::get('/list_siswa', [BiodataController::class, 'index'])->name('list_siswa');
 Route::get('/form_tambah_siswa', [BiodataController::class, 'create'])->name('add_siswa');

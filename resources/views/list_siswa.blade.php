@@ -38,22 +38,12 @@
                 </ul>
               </li>
             </ul>
-            <div class="col-md-10">
-                Hi,  {{ Auth::user()->name }}
-            </div>
-            <div class="d-flex" aria-labelledby="nav-item">
-                <a class="btn btn-outline-danger" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
+
           </div>
         </div>
+        @include('layout.menulog')
       </nav>
+
           </div>
         </div>
         <div class="m-4 p-5">

@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -42,69 +44,8 @@
         </div>
       </nav>
 
-      <div class="m-4 p-5">
-        <h1 class="display-4">Tambah Siswa</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-    <form class="row g-3"method="post" action="{{ $route }}">
-            @csrf
-            @method($method)
-   <div class="col-12">
-    <label for="nama" class="form-label">Nama</label>
-    <input type="text" class="form-control" id="nama" placeholder="Nama Lengkap" name="nama" value="{{ $bio->nama }}">
-</div>
-  <div class="col-md-6">
-    <label for="tempat" class="form-label">Tempat Lahir</label>
-    <input type="text" class="form-control" placeholder="Tempat Lahir" name="tempat" value={{ $bio->tempat}}>
-  </div>
-  <div class="col-md-6">
-    <label for="tanggal" class="form-label">Tanggal Lahir</label>
-    <input type="date" class="form-control" name="tgl" value="{{ $bio->tgl}}">
-  </div>
-  <div class="col-12">
-    <label for="hobi" class="form-label">Hobi</label>
-    <input type="text" class="form-control" placeholder="Hobi" name="hobi" value="{{ $bio->hobi}}">
-  </div>
-  <div class="col-md-6">
-    <label for="jk" class="form-label">Jenis Kelamin</label>
-    <select class="form-select" name="jk" value= {{ $bio->jk}}>
-      <option value="Laki-Laki">Laki-Laki</option>
-      <option value="Perempuan">Perempuan</option>
-    </select>
-  </div>
-  <div class="col-md-6">
-    <label for="agama" class="form-label">Agama</label>
-    <select class="form-select" name="agama" value={{ $bio->agama}}>
-      <option value="Islam">Islam</option>
-      <option value="Kristen">Kristen</option>
-      <option value="Budha">Budha</option>
-      <option value="katolik">Katolik</option>
-      <option value="Atheis">Atheis</option>
-    </select>
-  </div>
-  <div class="col-12">
-    <label for="inputAddress" class="form-label">Alamat</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="Alamat" name="alamat" value="{{ $bio->alamat}}">
-  </div>
-  <div class="col-md-6">
-    <label for="inputAddress2" class="form-label">Telepon</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Telepon" name=" telepon" value="{{ $bio->telepon}}">
-  </div>
-  <div class="col-md-6">
-    <label for="inputCity" class="form-label">Email</label>
-    <input type="text" class="form-control" id="inputCity" placeholder="Email" name="email" value="{{ $bio->email}}">
-  </div>
-
-  <div class="col-12" >
-    <button type="submit" class="btn btn-warning"> Edit</button>
-  </div>
-</form>
-<script>
-    $(document).ready(function(){
-        $('#tabel_siswa').DataTable();
-    });
-    </script>
-
-
+      <center><h1>Selamat Datang Di Blog </h1>
+        This is a modified jumbotron that occupies the entire horizontal space of its parent</center>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
